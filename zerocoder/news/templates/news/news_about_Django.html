@@ -1,0 +1,19 @@
+{% extends 'main/layoute.html' %}
+
+{% block title %}
+	<title>Новости Django</title>
+{% endblock %}
+
+{% block content %}
+<h1>Новости Django</h1>
+{%for new in news%}
+<div>
+    <h3>{{new.title}}</h3>
+    <p>Дата публикации: {{new.pub_date}}</p>
+    <p>Автор: {{new.author}}</p>
+    <h4>{{new.short_description}}</h4>
+    <div>{{new.text}}</div>
+
+</div>
+{%endfor%}
+{% endblock %}
